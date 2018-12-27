@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<excels>
+    <excel id="planExportByDate" fileName="分销楼盘" sqlMapsId="com.qfang.xinfang.dao.plan.PlanDao.getExportGarden">
+        <column key="ORGUNITNAME" width="80">分公司</column>
+        <column key="REGISTERNAME" width="80">登记名</column>
+        <column key="EXTENDNAME" width="80">推广名</column>
+        <column key="NUMBER" width="80">编号</column>
+        <column key="STARTTIME" width="100">分销开始时间</column>
+        <column key="ENDTIME" width="100">分销结束时间</column>
+        <column key="PROJECTTYPE" width="80" enumKey="key" enumDescription="desc"
+                enum="com.qfang.xinfang.enums.ProjectTypeEnum">项目类型
+        </column>
+
+    </excel>
+    <excel id="messageExportByDate" fileName="短信统计"
+           sqlMapsId="com.qfang.xinfang.dao.bi.MessageReportDao.exportMessageReportTotal">
+        <column key="BRANCHORGNAME" width="80">分公司</column>
+        <column key="REPORTTOTAL" width="80">报备短信</column>
+        <column key="ACCOUNTMSGTOTAL" width="80">帐号短信</column>
+        <column key="SUMTOTAL" width="80">合计</column>
+    </excel>
+
+    <!--楼盘导出-->
+    <excel id="gardenExportByDate" fileName="楼盘信息" sqlMapsId="com.qfang.xinfang.dao.GardenDao.exportGardenList">
+        <column key="FID" width="80">序号</column>
+        <column key="ERPGARDENID" width="80">ID</column>
+        <column key="NUMBER" width="80">编码</column>
+        <column key="REGISTERNAME" width="80">登记名</column>
+        <column key="EXTENDNAME" width="80">推广名</column>
+        <column key="ORGUNITNAME" width="80">分公司</column>
+    </excel>
+
+    <!--待退款导出-->
+    <excel id="refundWait" fileName="待退款记录" sqlMapsId="com.mshz.service.order.dao.automapper.DepositDao.exportExcel">
+        <column key="orderNo" width="100">订单号</column>
+        <column key="custName" width="100">住客</column>
+        <column key="custPhone" width="100">住客手机</column>
+        <column key="orderChannelDesc" width="100">渠道</column>
+        <column key="payChannelDesc" width="100">支付方式</column>
+        <column key="orderAmount" width="100">订单金额</column>
+        <column key="deposit" width="100">押金</column>
+        <column key="refundMoney" width="100">退款金额</column>
+        <column key="refundRemark" width="100">退款备注</column>
+        <column key="orderStatusDesc" width="100">订单状态</column>
+        <column key="manager" width="100">管家</column>
+        <column key="orderFinishTime" width="100">订单完成时间</column>
+    </excel>
+
+    <!--已退款导出-->
+    <excel id="refundFinish" fileName="已退款记录" sqlMapsId="com.mshz.service.order.dao.automapper.DepositDao.exportExcel">
+        <column key="orderNo" width="80">订单号</column>
+        <column key="custName" width="80">住客</column>
+        <column key="custPhone" width="80">住客手机</column>
+        <column key="orderChannelDesc" width="80">渠道</column>
+        <column key="payChannelDesc" width="80">支付方式</column>
+        <column key="orderAmount" width="80">订单金额</column>
+        <column key="deposit" width="80">押金</column>
+        <column key="refundMoney" width="80">退款金额</column>
+        <column key="refundRemark" width="80">退款备注</column>
+        <column key="orderStatusDesc" width="80">订单状态</column>
+        <column key="manager" width="80">管家</column>
+        <column key="orderFinishTime" width="80">订单完成时间</column>
+        <column key="checkOperator" width="80">操作人</column>
+        <column key="financeRemark" width="80">财务备注</column>
+    </excel>
+
+    <!--冻结导出-->
+    <excel id="freezeDeposit" fileName="押金冻结" sqlMapsId="com.mshz.service.order.dao.automapper.DepositDao.exportExcel">
+        <column key="FORDER_NO" width="80">订单编号</column>
+        <column key="FCUST_NAME" width="80">住客</column>
+        <column key="FPAY_CHANNEL" width="80">支付方式</column>
+        <column key="FPAY_ACCOUNT" width="80">支付账号</column>
+        <column key="FDEPOSIT" width="80">押金金额</column>
+        <column key="FORDER_CREAT_TIME" width="80">预订时间</column>
+        <column key="OPERATOR" width="80">管家</column>
+    </excel>
+    <!--关系字典数据导出-->
+    <excel id="gardenexport" fileName="关系字典数据" sqlMapsId="com.mshz.service.order.dao.automapper.DepositDao.exportExcel">
+        <column key="area" width="80">区域</column>
+        <column key="region" width="80">片区</column>
+        <column key="gardenName" width="80">楼盘名</column>
+        <column key="gardenId" width="80">楼盘ID</column>
+        <column key="destArea" width="80">ZR区域</column>
+        <column key="destRegion" width="80">ZR片区</column>
+        <column key="destGardenName" width="80">ZR楼盘名</column>
+    </excel>
+    <!--房源明细数据导出-->
+    <excel id="HousingDetailexport" fileName="房源明细数据" sqlMapsId="com.mshz.service.order.dao.automapper.DepositDao.exportExcel">
+        <column key="batch" width="80">批次号</column>
+        <column key="roomArea" width="80">区域</column>
+        <column key="roomRegion" width="80">片区</column>
+        <column key="gardenName" width="80">楼盘名</column>
+        <column key="roomNo" width="80">房源编码</column>
+        <column key="roomType" width="80">出租类型</column>
+        <column key="bedRoom" width="80">房间数</column>
+        <column key="livingRoom" width="80">客厅数</column>
+        <column key="direction" width="80">朝向</column>
+        <column key="area" width="80">面积</column>
+        <column key="rentMonth" width="80">月租金</column>
+        <column key="rentSingle" width="80">租单价</column>
+    </excel>
+    <!--房源明细导入模版-->
+    <excel id="HousingDetailModelexport" fileName="房源明细数据" sqlMapsId="com.mshz.service.order.dao.automapper.DepositDao.exportExcel">
+        <column key="batch" width="80">批次号</column>
+        <column key="roomArea" width="80">区域</column>
+        <column key="roomRegion" width="80">片区</column>
+        <column key="gardenName" width="80">楼盘名</column>
+        <column key="roomNo" width="80">房源编码</column>
+        <column key="roomType" width="80">出租类型</column>
+        <column key="bedRoom" width="80">房间数</column>
+        <column key="livingRoom" width="80">客厅数</column>
+        <column key="direction" width="80">朝向</column>
+        <column key="area" width="80">面积</column>
+        <column key="rentMonth" width="80">月租金</column>
+    </excel>
+    <excel id="mytestpost" fileName="我的测试2" sqlMapsId="com.mshz.service.order.dao.automapper.DepositDao.exportExcel1">
+        <column key="bedRoomNum" width="80">名称</column>
+        <column key="buildingName" width="80">名称</column>
+    </excel>
+</excels>
